@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+:root {
+    --border-radius: 10px;
+    --light-grey: #e5e7eb;
+    --light-orange: #fed7aa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    min-height: 100%;
+    font-family: 'Acme', sans-serif;
+    background-color: var(--light-grey);
+}
+
+body.home {
+    background-image: url(./dumpling.jpg);
+    background-size: cover;
+    background-position: 0% 5%;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 30px;
+}
+
+.header h1 {
+    font-size: 2.7rem;
+}
+
+.header ul {
+    display: flex;
+    gap: 16px;
+
+    list-style: none;
+    font-size: 1.4rem;
+    margin-left: 15%;
+}
+
+.header li {
+    cursor: pointer;
+}
+.header li:hover {
+    color: var(--light-orange);
+}
+
+/* Main-content */
+
+.main-content {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+    padding-bottom: 50px;
+}
+
+.main-content > div {
+    display: flex;
+    gap: 20px;
+    position: relative;
+
+    width: 500px;
+    background-color: var(--light-orange);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 3px grey;
+    padding: 10px;
+}
+
+.main-content .contact-info {
+    display: flex;
+    gap: 100px;
+}
+
+.main-content .contact-info > div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.3rem;
+}
